@@ -29,7 +29,7 @@
 
 ### 1. Clonar o repositório
 ```bash
-git clone https://github.com/SEU_USUARIO/nochelis.git
+git clone https://github.com/BrunoJMALima/nochelis.git
 cd nochelis
 ```
 
