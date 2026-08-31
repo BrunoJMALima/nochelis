@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📦 Nochelis ERP & Gestão Comercial
 
-## Getting Started
+> Sistema completo de gestão comercial, controle de estoque, vendas, compras e fornecedores desenvolvido com **Next.js 16**, **Tailwind CSS v4** e **Supabase**.
 
-First, run the development server:
+---
 
+## 🚀 Tecnologias Utilizadas
+
+- **Front-end**: [Next.js 16 (App Router)](https://nextjs.org/) + [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Estilização**: [Tailwind CSS v4](https://tailwindcss.com/) + [Lucide React Icons](https://lucide.dev/)
+- **Back-end & Banco de Dados**: [Supabase (PostgreSQL)](https://supabase.com/)
+- **Autenticação e RLS**: Supabase Auth com Row Level Security (RLS)
+- **SSR & Sessões**: `@supabase/ssr`
+
+---
+
+## ✨ Funcionalidades Principais
+
+- 🔐 **Autenticação e Controle de Acesso**: Login e gestão de permissões de usuários.
+- 📊 **Dashboard & Relatórios**: Visão geral de métricas, vendas e estoques em tempo real.
+- 📦 **Gestão de Produtos e Categorias**: Cadastro completo com categorias e movimentação.
+- 🏭 **Fornecedores e Compras**: Registro de fornecedores e controle de entradas de mercadorias.
+- 🛒 **Vendas e Clientes**: Gestão de clientes, registro de vendas e emissão de movimentações.
+- 📈 **Controle de Estoque**: Entradas, saídas e histórico auditável de saldo.
+
+---
+
+## 🛠️ Como Executar Localmente
+
+### 1. Clonar o repositório
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/SEU_USUARIO/nochelis.git
+cd nochelis
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Instalar dependências
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Configurar Variáveis de Ambiente
+Crie um arquivo `.env.local` na raiz do projeto com suas credenciais do Supabase:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+NEXT_PUBLIC_SUPABASE_URL=sua_url_do_supabase
+NEXT_PUBLIC_SUPABASE_ANON_KEY=sua_chave_anon_do_supabase
+```
 
-## Learn More
+### 4. Rodar o servidor de desenvolvimento
+```bash
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Abra [http://localhost:3000](http://localhost:3000) no navegador para acessar a aplicação.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📂 Estrutura do Projeto
 
-## Deploy on Vercel
+```
+nochelis/
+├── src/
+│   ├── app/           # Rotas do Next.js (App Router)
+│   ├── components/    # Componentes React reutilizáveis
+│   ├── context/       # Provedores de contexto do React
+│   ├── lib/           # Clientes do Supabase e utilitários
+│   └── types/         # Definições de tipos TypeScript
+├── supabase/          # Migrations e scripts SQL do Supabase
+└── public/            # Arquivos estáticos
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 Licença
+
+Este projeto é de uso privado / restrito. Todos os direitos reservados.
