@@ -70,15 +70,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (storedCurrentUser) {
         setUser(JSON.parse(storedCurrentUser));
       } else {
-        // Usuário padrão logado para fluidez de desenvolvimento
-        const defaultUser = parsedUsers[0] || initialUsers[0];
-        setUser(defaultUser);
-        localStorage.setItem(STORAGE_CURRENT_USER_KEY, JSON.stringify(defaultUser));
+        setUser(null);
       }
     } catch (e) {
       console.warn('Erro ao inicializar sessão local:', e);
       setUsersList(initialUsers);
-      setUser(initialUsers[0]);
+      setUser(null);
     } finally {
       setIsLoading(false);
     }
